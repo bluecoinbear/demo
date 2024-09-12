@@ -1,3 +1,6 @@
+y = "Hello world!"
+x = 5.6
+
 print("length of array:", len(y))
 print("array:'" + str(x) + "'")
 fruits = ["blackberry", "watermelon", "Mango","Muskmelon", "wolfberry", "pear", "banana", "blueberry","apple", "strawberry", "raspberry"]

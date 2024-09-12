@@ -1,0 +1,15 @@
+Sub hst2015()
+    Dim strFile$, strFileOut$, strLine$, i%, strLast$, strTitle$, newline As Boolean, k As Double
+    strFile = "C:\2023\2015hst.txt"
+    Open strFile For Input As #1
+    Do
+        Line Input #1, strLine
+        strLine = Trim(strLine)
+        If InStr(1, strLine, "NOTE: HST") > 0 Then
+            Debug.Print strLine
+            k = k + CDbl(Mid(strLine, Len("NOTE: HST") + 1))
+        End If
+    Loop Until EOF(1)
+    Close #1
+    Debug.Print k
+End Sub
